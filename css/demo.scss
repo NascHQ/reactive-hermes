@@ -1,0 +1,71 @@
+body, html {
+    height: 100%;
+    font-family: sans-serif;
+}
+body {
+    background-image: url(./bg.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+h3 {
+    text-align: center;
+    text-transform: uppercase;
+    // font-size: 40px;
+}
+
+.example-container {
+    min-height: 45px;
+    width: 80%;
+    max-width: 400px;
+    margin: auto;
+    border-bottom: solid 1px #d0d0d0;
+    padding-top: 25px;
+
+    .trigger-btn {
+        height: 40px;
+        background: rgb(249, 249, 249);
+        margin-left: 4px;
+        border-radius: 5px;
+        font-family: monospace;
+        margin-top: -10px;
+        cursor: pointer;
+        width: 40px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        border: solid 1px;
+        float: right;
+        box-sizing: border-box;
+
+        &:hover {
+            border-width: 3px;
+        }
+    }
+}
+
+.hermes-header {
+    width: 100%;
+    background-image: url(./header.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    height: 350px;
+}
+
+.react-example {
+    input,
+    textarea {
+        width: 95%;
+        height: 20px;
+        margin-bottom: 5px;
+    }
+    textarea {
+        height: 100px;
+    }
+    input[type=button] {
+        width: 40px;
+        height: 20px;
+        float: right;
+    }
+}

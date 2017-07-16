@@ -1,7 +1,7 @@
 {
-  "name": "react-name-surname",
+  "name": "hermes",
   "version": "1.0.0",
-  "description": "react-name-surname React component",
+  "description": "A notification manager for react",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "nwb": "0.18.x",
+    "nwb-sass": "^0.8.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
