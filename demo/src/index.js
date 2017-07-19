@@ -92,7 +92,11 @@ class Demo extends Component {
 
   render() {
     return <div>
-      <HermesComponent defaultDuration='8' updateTitleCounter playAudio />
+      <HermesComponent
+        defaultDuration='8'
+        updateTitleCounter
+        playAudio
+        animate />
 
       <h3>
         <div className='hermes-header' />
@@ -104,7 +108,7 @@ class Demo extends Component {
       </div>
       <div className='example-container'>
         A warning
-        <div className='trigger-btn' type='button' onClick={event=>{this.showRandomMessage({type: 'warn'})}} >►</div>
+        <div className='trigger-btn' type='button' onClick={event=>{this.showRandomMessage({type: 'warn', animate: false})}} >►</div>
       </div>
       <div className='example-container'>
         An error

@@ -42,23 +42,23 @@ export const Hermes = {
     options.type = 'warn'
     global.Hermes.message(message, options)
   },
-  warning (message) {
+  warning (message, options = {}) {
     options.type = 'warn'
     global.Hermes.message(message, options)
   },
-  error (message) {
+  error (message, options = {}) {
     options.type = 'error'
     global.Hermes.message(message, options)
   },
-  fail (message) {
+  fail (message, options = {}) {
     options.type = 'error'
     global.Hermes.message(message, options)
   },
-  info (message) {
+  info (message, options = {}) {
     options.type = 'info'
     global.Hermes.message(message, options)
   },
-  success (message) {
+  success (message, options = {}) {
     options.type = 'success'
     global.Hermes.message(message, options)
   }
@@ -118,6 +118,9 @@ export class HermesComponent extends React.Component {
       }
     }
     data.id = data.id || idGen.next().value
+    if (data.animate !== false && this.props.animate) {
+      data.animate = true
+    }
     let list = this.state.messages
     list[data.id] = data
 
@@ -152,8 +155,12 @@ export class HermesComponent extends React.Component {
     let list = this.state.messages
     if (id && list[id]) {
       let message = list[id]
+      if (data.animate !== false && this.props.animate) {
+        data.animate = true
+      }
       message.body = data.body
       message.type = data.type
+      message.animate = data.animate
       if (data.duration) {
         if (message.to) {
           clearTimeout(message.to)
