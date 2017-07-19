@@ -1,6 +1,6 @@
 # Hermes, the notifier
 
-![Hermes notifier header](https://github.com/NascHQ/hermes-notifier/blob/master/css/header.png?raw=true)
+![Hermes notifier header](https://github.com/NascHQ/hermes-notifier/raw/master/css/header.png?raw=true)
 
 Hermes is a notification message manager.  
 It deals with your messages in your page's interface.
@@ -10,7 +10,7 @@ You can even manage messages by id, simulate a loading controller or show an ent
 
 Take a look.
 
-![Messages example](https://github.com/NascHQ/reactive-hermes/blob/master/css/6.gif)
+![Messages example](https://github.com/NascHQ/reactive-hermes/raw/master/css/6.gif)
 
 See **how** to do this in the [examples below](#examples).  
 Test it **live**, in the [demo tool](https://naschq.github.io/reactive-hermes/demo/dist/index.html).
@@ -121,7 +121,7 @@ Hermes.message({
 })
 ```
 Result:  
-![Messages example](https://github.com/NascHQ/reactive-hermes/blob/master/css/2.gif)
+![Messages example](https://github.com/NascHQ/reactive-hermes/raw/master/css/2.gif)
 
 #### Showing an error:
 ```js
@@ -135,7 +135,7 @@ Hermes.message({
 })
 ```
 Result:  
-![Messages example](https://github.com/NascHQ/reactive-hermes/blob/master/css/3.gif)
+![Messages example](https://github.com/NascHQ/reactive-hermes/raw/master/css/3.gif)
 
 #### Showing an info:
 ```js
@@ -149,7 +149,7 @@ Hermes.message({
 })
 ```
 Result:  
-![Messages example](https://github.com/NascHQ/reactive-hermes/blob/master/css/4.gif)
+![Messages example](https://github.com/NascHQ/reactive-hermes/raw/master/css/4.gif)
 
 #### Showing a locked message:
 ```js
@@ -161,7 +161,7 @@ Hermes.message({
 })
 ```
 Result:  
-![Messages example](https://github.com/NascHQ/reactive-hermes/blob/master/css/5.gif)
+![Messages example](https://github.com/NascHQ/reactive-hermes/raw/master/css/5.gif)
 
 #### Updating a message programatically:
 ```js
@@ -185,7 +185,7 @@ Hermes.updateMessage({
 ```
 
 Result:  
-![Messages example](https://github.com/NascHQ/reactive-hermes/blob/master/css/7.gif)
+![Messages example](https://github.com/NascHQ/reactive-hermes/raw/master/css/7.gif)
 
 #### Showing message containing a _ReactComponent_:
 ```js
@@ -198,7 +198,7 @@ Hermes.message({
 })
 ```
 Result:  
-![Messages example](https://github.com/NascHQ/reactive-hermes/blob/master/css/8.gif)
+![Messages example](https://github.com/NascHQ/reactive-hermes/raw/master/css/8.gif)
 
 ## Customizing styles
 
