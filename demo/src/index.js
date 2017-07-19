@@ -63,7 +63,7 @@ class Demo extends Component {
       locked: true,
       animate: true
     })
-    
+
     setTimeout(_ => {
       Hermes.updateMessage({
         id: 'savingMessage',
@@ -78,6 +78,7 @@ class Demo extends Component {
   showReactMessage () {
     Hermes.message({
       id: 'demoWithReact',
+      duration: 99999,
       body: <div className='react-example'>
         We could use other elements here:<br />
         <input type="text" placeholder='say something...' /><br />
@@ -127,6 +128,12 @@ class Demo extends Component {
       <div className='example-container'>
         Show message with a react component in it
         <div className='trigger-btn' type='button' onClick={event=>{this.showReactMessage()}}> ►</div>
+      </div>
+
+      <div className='footer'>
+        <a href='https://github.com/NascHQ/reactive-hermes' target='_blank'>Github</a> | 
+        <a href='https://www.npmjs.com/package/reactive-hermes' target='_blank'>NPM</a> | 
+        <a href='https://twitter.com/felipenmoura' target='_blank'>@felipenmoura</a>
       </div>
     </div>
   }

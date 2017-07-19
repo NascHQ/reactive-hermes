@@ -68,7 +68,8 @@
       }
     }
     &.hermes-warn {
-      background-color: #dd5;
+      // background-color: #dd5;
+      background-color: yellow;
 
       &:after {
         content: '⚠';
