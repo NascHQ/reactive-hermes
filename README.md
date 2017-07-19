@@ -30,7 +30,7 @@ You need to import and add the `HermesComponent` to your interface.
 You should do that **once**, let's say, in your root page for example.
 
 ```js
-import { HermesComponent } from 'hermes'
+import { HermesComponent } from 'reactive-hermes'
 
 [...]
 
@@ -105,7 +105,7 @@ Are you using methods like `showWarning` and `showSuccess`?
 No problem, you can just import them from `Hermes` too!
 
 ```
-import { showerror, showSuccess } from 'hermes'
+import { showerror, showSuccess } from 'reactive-hermes'
 ```
 
 ## Examples
