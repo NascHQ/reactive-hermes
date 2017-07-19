@@ -62,7 +62,7 @@ You can send some props to enforce a default behavior:
 
 ### Methods
 
-These are methods you can acces at `Hermes`:
+These are methods you can access at `Hermes`:
 
 - _Hermes.message(String)_  
 This is an easy way to show a message.
@@ -71,7 +71,7 @@ This is an easy way to show a message.
 This is the advanced way to show messages.  
 It accepts an object with:
 
-  - **type**: It may be `default`, `warn/warning`, `error/fail`, `info` or `success`
+  - **type**: It may be `default`, `warn/warning`, `error/fail`, `info` or `success`
   - **body**: This is the message itself. It may be a _ReactComponent_ or a _String_
   - **[id]**: An optional id for the message
   - **[playAudio]**: Overwrites the global `playAudio` attribute for this particular message. May be `true/false` or an _AudioObject_
