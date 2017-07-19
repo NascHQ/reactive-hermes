@@ -10,6 +10,11 @@ You can even manage messages by id, simulate a loading controller or show an ent
 
 Take a look.
 
+![Messages example](https://github.com/NascHQ/reactive-hermes/blob/master/css/6.gif)
+
+See **how** to do this in the [examples below](#examples).  
+Test it **live**, in the [demo tool](https://naschq.github.io/reactive-hermes/demo/dist/index.html).
+
 ## Installing
 
 ```
@@ -100,3 +105,97 @@ No problem, you can just import them from `Hermes` too!
 import { showerror, showSuccess } from 'hermes'
 ```
 
+## Examples
+
+See some ways you can show messages
+
+#### Showing a warning:
+```js
+let message = 'You have been warned!';
+Hermes.warn(message);
+// show the warning, animating its icon
+Hermes.warn(message, { animate: true });
+Hermes.message({
+  type: 'warn',
+  body: message
+})
+```
+Result:  
+![Messages example](https://github.com/NascHQ/reactive-hermes/blob/master/css/2.gif)
+
+#### Showing an error:
+```js
+let message = 'Something is out of order';
+Hermes.fail(message);
+Hermes.error(message);
+Hermes.error(message, { /* options */ });
+Hermes.message({
+  type: 'error',
+  body: message
+})
+```
+Result:  
+![Messages example](https://github.com/NascHQ/reactive-hermes/blob/master/css/3.gif)
+
+#### Showing an info:
+```js
+let message = 'Info messages, wohoo!!';
+Hermes.info(message);
+// show info and play audio
+Hermes.info(message, { playAudio: true });
+Hermes.message({
+  type: 'info',
+  body: message
+})
+```
+Result:  
+![Messages example](https://github.com/NascHQ/reactive-hermes/blob/master/css/4.gif)
+
+#### Showing a locked message:
+```js
+let message = 'Yet another useless message';
+Hermes.message({
+  body: message,
+  id: 'myMessageId',
+  locked: true
+})
+```
+Result:  
+![Messages example](https://github.com/NascHQ/reactive-hermes/blob/master/css/5.gif)
+
+#### Updating a message programatically:
+```js
+let message = 'Saving...';
+Hermes.message({
+  body: message,
+  id: 'savingMsg',
+  locked: true,
+  animate: true
+})
+```
+Then, some time later...
+```js
+Hermes.updateMessage({
+  body: 'Saved',
+  id: 'savingMsg',
+  locked: true,
+  animate: false,
+  duration: 3 // 3 seconds
+})
+```
+
+Result:  
+![Messages example](https://github.com/NascHQ/reactive-hermes/blob/master/css/7.gif)
+
+#### Showing message containing a _ReactComponent_:
+```js
+Hermes.message(<div>Content here :)</div>)
+// or
+Hermes.message({
+  // ...
+  body: <SomeComponent prop1={val} />
+  // ...
+})
+```
+Result:  
+![Messages example](https://github.com/NascHQ/reactive-hermes/blob/master/css/8.gif)
