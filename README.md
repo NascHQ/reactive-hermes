@@ -3,10 +3,13 @@
 ![Hermes notifier header](https://github.com/NascHQ/hermes-notifier/raw/master/css/header.png?raw=true)
 
 Hermes is a notification message manager.  
-It deals with your messages in your page's interface.
+It deals with your messages in your page's interface.  
+It manages **multiple messages** at a time.  
+It's cleaner, ligher.  
+It allows you to use _react components_ within the message, making it a powerfull tool.
 
 It can be used to replace other messagers. Has a lighter, malleable design and animations.  
-You can even manage messages by id, simulate a loading controller or show an entire _react component_ in it.
+You can even manage messages by id or simulate a loading controller.
 
 Take a look.
 
@@ -18,7 +21,7 @@ Test it **live**, in the [demo tool](https://naschq.github.io/reactive-hermes/de
 ## Installing
 
 ```
-**TODO**
+npm install --save reactive-hermes
 ```
 
 ## Using it
@@ -45,7 +48,7 @@ Let's see some of the cool things you can do with it!
 You can send some props to enforce a default behavior:
 
 - defaultDuration: An integer representing the duration of the message in seconds. By default, it will not close itself.
-- updateTitleCounter: Boolean. If present, will update the page's title adding the number of open notifications.
+- updateTitleCounter: Boolean. If present, will update the page's title adding the number of open notifications. Like `(2) Page Title`.
 - playAudio: Boolean/AudioObject. You can simply use the `playAudio` attribute in the tag to use a default audio or pass a value to it with an Audio Object (to customize the audio).
 - animate: Animates all the message icons, except for messages that overwrite it.
 
