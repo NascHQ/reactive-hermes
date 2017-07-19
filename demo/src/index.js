@@ -96,7 +96,8 @@ class Demo extends Component {
         defaultDuration='8'
         updateTitleCounter
         playAudio
-        animate />
+        // animate
+      />
 
       <h3>
         <div className='hermes-header' />
