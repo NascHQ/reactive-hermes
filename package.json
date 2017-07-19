@@ -1,6 +1,6 @@
 {
   "name": "reactive-hermes",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A notification manager for react",
   "main": "lib/index.js",
   "module": "es/index.js",
