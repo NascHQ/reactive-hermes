@@ -213,3 +213,22 @@ You can add changes to the following CSS selectors:
 
 Feel free to contribute to this project by sending _Pull Requests_, reporting problems or even sending suggestions.  
 Just remember to follow the community terms/rules/good practices :)
+
+#### How to contribute
+
+Once you've cloned the project...  
+
+Install:  
+```npm install```
+
+Start the server (this will also enable the live/hot reload for the component):  
+```npm start```
+
+Make chages:  
+Work in the `src/` files, or in the `demos/src/` files, or in `css/` files.
+
+Build:  
+```npm run build```
+
+Then push it and open a PR :)
+
