@@ -199,3 +199,17 @@ Hermes.message({
 ```
 Result:  
 ![Messages example](https://github.com/NascHQ/reactive-hermes/blob/master/css/8.gif)
+
+## Customizing styles
+
+You can add changes to the following CSS selectors:
+
+- **#hermes-container:** The container in which all the messages will be appended to
+- **.hermes-notif:** Each of the notifications
+- **.hermes-remove-message:** The `x` button in unlocked messages, to close them
+- **.hermes-error/.hermes-warn/.hermes-info/.hermes-default:** Same as _.hermes-notif_, but selected by message type
+
+## Contributing
+
+Feel free to contribute to this project by sending _Pull Requests_, reporting problems or even sending suggestions.  
+Just remember to follow the community terms/rules/good practices :)
