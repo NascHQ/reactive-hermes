@@ -8,7 +8,7 @@ class Demo extends Component {
   constructor (props) {
     super(props)
 
-    this.getNextMessage = 
+    // this.getNextMessage = 
     this.messages = {
       default: [
         'A defaule message here',
@@ -61,7 +61,8 @@ class Demo extends Component {
       id: 'savingMessage',
       body: 'Saving...',
       locked: true,
-      animate: true
+      animate: true,
+      playAudio: false
     })
 
     setTimeout(_ => {
@@ -79,6 +80,7 @@ class Demo extends Component {
     Hermes.message({
       id: 'demoWithReact',
       duration: 99999,
+      playAudio: false,
       body: <div className='react-example'>
         We could use other elements here:<br />
         <input type="text" placeholder='say something...' /><br />
@@ -90,7 +92,7 @@ class Demo extends Component {
 
   render() {
     return <div>
-      <HermesComponent defaultDuration='8' updateTitleCounter />
+      <HermesComponent defaultDuration='8' updateTitleCounter playAudio />
 
       <h3>
         <div className='hermes-header' />
