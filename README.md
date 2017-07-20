@@ -30,7 +30,8 @@ You need to import and add the `HermesComponent` to your interface.
 You should do that **once**, let's say, in your root page for example.
 
 ```js
-import { HermesComponent } from 'reactive-hermes'
+// used only once
+import { Hermes, HermesComponent } from 'reactive-hermes'
 
 [...]
 
@@ -38,6 +39,19 @@ import { HermesComponent } from 'reactive-hermes'
 ```
 
 Now, you can access the global `Hermes` object, or import it in your modules and then use its API, described below.
+
+```js
+// used anywhere
+import { Hermes } from 'reactive-hermes'
+// or
+import Hermes from 'reactive-hermes'
+
+[...]
+
+Hermes.message('The message')
+// or
+window.Hermes.message('The message') // does not require to be imported
+```
 
 ## API
 
@@ -124,6 +138,19 @@ import { showerror, showSuccess } from 'reactive-hermes'
 ## Examples
 
 See some ways you can show messages
+
+#### Showing a success message:
+```js
+let message = 'You are the chosen one.';
+Hermes.success(message);
+Hermes.success(message, { /* other options */ });
+Hermes.message({
+  type: 'success',
+  body: message
+})
+```
+Result:  
+![Messages example](https://github.com/NascHQ/reactive-hermes/raw/master/css/9.gif)
 
 #### Showing a warning:
 ```js

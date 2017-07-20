@@ -300,7 +300,6 @@ export const showError = (message) => {
   window.Hermes.updateMessage({
     body: message,
     duration: 15,
-    id: message,
     type: 'error'
   })
 }
@@ -317,8 +316,7 @@ export const showSuccess = (message) => {
   window.Hermes.updateMessage({
     body: message,
     duration: 4,
-    id: 'success',
-    type: 'default'
+    type: 'success'
   })
 }
 

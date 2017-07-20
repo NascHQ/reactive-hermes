@@ -34,6 +34,13 @@ class Demo extends Component {
         'DANGER!',
         'Something is out of order!',
         'Sorry...I got no idea!'
+      ],
+      success: [
+        'Yay, it worked!',
+        'It worked...who would expect that?!',
+        'I knew it would work',
+        'Congratulations, it worked!',
+        'You are the chosen one.'
       ]
     }
 
@@ -93,7 +100,7 @@ class Demo extends Component {
   render() {
     return <div>
       <HermesComponent
-        defaultDuration='8'
+        defaultDuration='12'
         updateTitleCounter
         playAudio
         // onInfo={data => {console.log('0: ', data)}}
@@ -113,6 +120,10 @@ class Demo extends Component {
       <div className='example-container'>
         Just a message
         <div className='trigger-btn' type='button' onClick={event=>{this.showRandomMessage({type: 'default'})}} >►</div>
+      </div>
+      <div className='example-container'>
+        A success message
+        <div className='trigger-btn' type='button' onClick={event=>{this.showRandomMessage({type: 'success'})}} >►</div>
       </div>
       <div className='example-container'>
         A warning

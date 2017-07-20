@@ -87,6 +87,16 @@
         margin-top: -3px;
       }
     }
+    &.hermes-success {
+      background-color: #42b142;
+      color: #fff;
+
+      &:after {
+        content: '✓';
+        color: #fff;
+        font-weight: bold;
+      }
+    }
     &.animate {
       &:after {
         animation: bounce-up linear 2s infinite;
