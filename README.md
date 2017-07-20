@@ -79,6 +79,7 @@ It accepts an object with:
   - **[locked]**: Hides the "x" button to close the message. Requires an `id`. May only be closed programatically
   - **[animate]**: Enabled the animation for the message icon
 
+
 - _Hermes.updateMessage(Object)_  
 Allows you to update an existing message. If the message is not opened, it will be shown.  
 The object **must** have an `id` for the message to be updated.
@@ -98,6 +99,18 @@ Equivalent to use `Hermes.message` passing type 'warn'.
 Equivalent to use `Hermes.message` passing type 'error'.
 - _Hermes.success(message[, options])_  
 Equivalent to use `Hermes.message` passing type 'success'.
+
+### Events
+
+You can use this events in the one tag for the _HermesComponent_, so, the listener will be called everytime any message triggers the given event. Or you can pass the eventListener on each individual message to listen for only its event.
+
+- **onMessageOpen**: Will be trigger after ending the message animation for showing the message.
+- **onMessageClose**: Will be trigger after ending the message animation for closing the message.
+- **onMessageUpdate**: Will be trigger after updating a message.
+- **onInfo**: Triggered when a message of type `info` is shown.
+- **onWarn**: Triggered when a message of type `warn` is shown.
+- **onError**: Triggered when a message of type `error` is shown.
+- **onSuccess**: Triggered when a message of type `success` is shown.
 
 ## Compatibility
 
@@ -128,7 +141,7 @@ Result:
 
 #### Showing an error:
 ```js
-let message = 'Something is out of order';
+let message = 'Something is out of order!';
 Hermes.fail(message);
 Hermes.error(message);
 Hermes.error(message, { /* options */ });

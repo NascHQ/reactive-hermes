@@ -96,6 +96,13 @@ class Demo extends Component {
         defaultDuration='8'
         updateTitleCounter
         playAudio
+        // onInfo={data => {console.log('0: ', data)}}
+        // onWarn={data => {console.log('0: ', data)}}
+        // onError={data => {console.log('0: ', data)}}
+        // onSuccess={data => {console.log('0: ', data)}}
+        // onMessageOpen={data => {console.log('1: ', data)}}
+        // onMessageUpdate={data => {console.log('2: ', data)}}
+        // onMessageClose={data => {console.log('3: ', data)}}
         // animate
       />
 

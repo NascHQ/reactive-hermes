@@ -145,16 +145,53 @@ export class HermesComponent extends React.Component {
         }
       }
       data = this.setMessageDuration(data)
-      if (data.onShow) {
-        data.onShow(data)
-      }
+      this.triggerEvent(data, 'messageOpen')
     })
+  }
+
+  triggerEvent (message, eventName) {
+    eventName = 'on' + eventName.charAt(0).toUpperCase() + eventName.slice(1)
+    const exec = function (message, eventName, container) {
+      if (container[eventName]) {
+        try {
+          container[eventName](message)
+        } catch (e) {
+          console.error('Failed on callback for ' + eventName + '\nError Message: ' + (e.message || e) + ' for the message: ', message)
+        }
+      }
+    }
+    exec(message, eventName, message)
+    exec(message, eventName, this.props)
+    if (eventName === 'onMessageUpdate' || eventName === 'onMessageOpen') {
+      switch (message.type) {
+        case 'error':
+        case 'fail':
+          exec(message, 'onError', message)
+          exec(message, 'onError', this.props)
+        break
+        case 'warn':
+        case 'warning':
+          exec(message, 'onWarning', message)
+          exec(message, 'onWarning', this.props)
+        break
+        case 'info':
+          exec(message, 'onInfo', message)
+          exec(message, 'onInfo', this.props)
+        break
+        case 'success':
+        case 'ok':
+          exec(message, 'onSuccess', message)
+          exec(message, 'onSuccess', this.props)
+        break
+      }
+    }
   }
 
   updateMessage (id, data) {
     let list = this.state.messages
     if (id && list[id]) {
       let message = list[id]
+      let oldMessage = Object.assign({}, list[id])
       if (data.animate !== false && this.props.animate) {
         data.animate = true
       }
@@ -170,6 +207,11 @@ export class HermesComponent extends React.Component {
       list[id] = message
       this.setState({
         messages: list
+      }, _ => {
+        this.triggerEvent({
+          prev: oldMessage,
+          next: message
+        }, 'messageUpdate')
       })
     } else {
       data.id = id || data.id || idGen.next().value
@@ -200,6 +242,7 @@ export class HermesComponent extends React.Component {
         messages: list
       }, _ => {
         setTimeout(_ => {
+          this.triggerEvent(data, 'messageClose')
           this.removeMessageElement(data)
         }, 1000)
       })
