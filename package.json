@@ -1,6 +1,6 @@
 {
   "name": "reactive-hermes",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "A notification manager for react. Animated, customizable, light and cleaner, allows you to controll duration, sound, and even use other react components inside of messages.",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -20,7 +20,9 @@
   },
   "repository": "https://github.com/NascHQ/reactive-hermes",
   "bugs": "https://github.com/NascHQ/reactive-hermes/issues",
-  "dependencies": {},
+  "dependencies": {
+    "babel-runtime": "^6.23.0"
+  },
   "peerDependencies": {
     "react": "15.x"
   },
